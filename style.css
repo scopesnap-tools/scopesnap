@@ -699,3 +699,41 @@ a:focus-visible {
     margin-bottom: 12px;
   }
 }
+
+.site-footer {
+  margin-top: 48px;
+  padding: 24px 16px;
+  text-align: center;
+  border-top: 1px solid #e5e7eb;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.site-footer p {
+  margin: 5px 0;
+}
+
+/* .privacy-note {
+  margin: 16px auto 0;
+  max-width: 640px;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6;
+  align-items: center;
+} */
+.back-to-top {
+  margin: 16px 0 28px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.back-to-top a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-to-top a:hover {
+  text-decoration: underline;
+}
+
