@@ -723,7 +723,7 @@ a:focus-visible {
 } */
 .back-to-top {
   margin: 16px 0 28px;
-  align-item: center;
+  text-align: center;
   font-size: 14px;
 }
 
