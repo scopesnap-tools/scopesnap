@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create clear, professional project scope documents in minutes with ScopeSnap.">
+  <link rel="icon" href="data:,">
+  <title>ScopeSnap — Project Scope Builder</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="ScopeSnap home">
+      <span class="brand-icon">S</span>
+      <span>ScopeSnap</span>
+    </a>
+    <span class="header-note">Your projects, clearly defined.</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">THE PROJECT SCOPE BUILDER</span>
+      <h1>Turn ideas into <span>clear plans.</span></h1>
+      <p>Define the work. Set expectations. Start every project with confidence.</p>
+    </section>
+
+    <section class="workspace">
+      <form id="scope-form" class="form-panel">
+        <div class="panel-heading">
+          <div>
+            <span class="step-label">STEP 01</span>
+            <h2>Project details</h2>
+          </div>
+          <span class="panel-icon">✳</span>
+        </div>
+
+        <div class="field">
+          <label for="project-name">Project name <span>*</span></label>
+          <input id="project-name" name="projectName" type="text"
+            placeholder="e.g. Brand website redesign" required maxlength="120">
+        </div>
+
+        <div class="field">
+          <label for="client-name">Client or company</label>
+          <input id="client-name" name="clientName" type="text"
+            placeholder="e.g. Acme Studio" maxlength="120">
+        </div>
+
+        <div class="field">
+          <label for="project-description">Project description <span>*</span></label>
+          <textarea id="project-description" name="description" rows="4"
+            placeholder="What are you building, and why?" required maxlength="3000"></textarea>
+        </div>
+
+        <div class="field">
+          <label for="deliverables">Deliverables <span>*</span></label>
+          <textarea id="deliverables" name="deliverables" rows="4"
+            placeholder="One deliverable per line&#10;e.g.&#10;Homepage design&#10;Mobile responsive layout&#10;Contact form" required maxlength="3000"></textarea>
+          <span class="field-hint">Put each deliverable on a new line.</span>
+        </div>
+
+        <div class="two-columns">
+          <div class="field">
+            <label for="deadline">Target deadline</label>
+            <input id="deadline" name="deadline" type="date">
+          </div>
+
+          <div class="field">
+            <label for="revisions">Revision rounds</label>
+            <select id="revisions" name="revisions">
+              <option value="1">1 round</option>
+              <option value="2" selected>2 rounds</option>
+              <option value="3">3 rounds</option>
+              <option value="4">4 rounds</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="budget">Project budget (optional)</label>
+          <input id="budget" name="budget" type="text"
+            placeholder="e.g. $500 or ₹40,000" maxlength="100">
+        </div>
+
+        <div class="field">
+          <label for="exclusions">What's not included?</label>
+          <textarea id="exclusions" name="exclusions" rows="3"
+            placeholder="e.g. Hosting fees, ongoing maintenance" maxlength="2000"></textarea>
+        </div>
+
+        <button class="primary-button" type="submit">
+          Generate project scope <span aria-hidden="true">→</span>
+        </button>
+        <p class="privacy-note">Your project details stay in this browser in this version.</p>
+      </form>
+
+      <section class="preview-panel" aria-labelledby="preview-heading">
+        <div class="panel-heading preview-heading">
+          <div>
+            <span class="step-label">STEP 02</span>
+            <h2 id="preview-heading">Your document</h2>
+          </div>
+          <span class="draft-badge">DRAFT</span>
+        </div>
+
+        <div id="empty-state" class="empty-state">
+          <div class="empty-illustration" aria-hidden="true">↗</div>
+          <h3>Your next great project starts here.</h3>
+          <p>Fill in the project details, then generate a clear scope document ready to review and edit.</p>
+          <div class="empty-features">
+            <span>✓ Clear deliverables</span>
+            <span>✓ Defined expectations</span>
+            <span>✓ Print-ready document</span>
+          </div>
+        </div>
+
+        <article id="scope-document" class="scope-document" hidden>
+          <div id="document-content"></div>
+          <div class="document-actions">
+            <button id="copy-button" class="secondary-button" type="button">
+              Copy document
+            </button>
+            <button id="print-button" class="primary-button" type="button">
+              Print / Save PDF
+            </button>
+          </div>
+          <p id="action-status" class="action-status" role="status" aria-live="polite"></p>
+        </article>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <span>ScopeSnap</span>
+      <span>Make the work clear from day one.</span>
+    </footer>
+  </main>
+</body>
+</html>
