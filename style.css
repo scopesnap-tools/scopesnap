@@ -713,14 +713,14 @@ a:focus-visible {
   margin: 5px 0;
 }
 
-/* .privacy-note {
+.privacy-note {
   margin: 16px auto 0;
   max-width: 640px;
   color: #64748b;
   font-size: 12px;
   line-height: 1.6;
   align-items: center;
-} */
+}
 .back-to-top {
   margin: 16px 0 28px;
   text-align: center;
